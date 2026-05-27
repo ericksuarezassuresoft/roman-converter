@@ -1,0 +1,11 @@
+{
+    "name": "roman-converter",
+    "version": "1.0.0",
+    "scripts": {
+        "test": "jest",
+        "run": "node src/run.js"
+      },
+    "devDependencies": {
+        "jest": "^29.7.0"
+    }
+}
