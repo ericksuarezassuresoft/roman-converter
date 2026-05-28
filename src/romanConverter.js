@@ -1,18 +1,15 @@
 function romanConverter(roman) {
-    if (roman === 10) {
-        return "X";
+    if (roman >= 10) {
+        return "X" + romanConverter(roman - 10);
     }
 
-    if (roman === 11) { 
-        return "XI";
-    }
-
-    if (roman === 4) {
-        return "IV";
-    }
-
+    
     if (roman === 9) {
         return "IX";
+    }
+    
+    if (roman === 4) {
+        return "IV";
     }
 
     if (roman >= 5) {
