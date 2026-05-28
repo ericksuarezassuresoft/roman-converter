@@ -1,33 +1,28 @@
 function romanConverter(roman) {
-    if (roman === 90) {
-        return "XC";
-    }
-
-    if (roman >= 50) {
-        return "L" + romanConverter(roman - 50);
-    }
-
-    if (roman >= 40) {
-        return "XL" + romanConverter(roman - 40);
-    }
-
-    if (roman >= 10) {
-        return "X" + romanConverter(roman - 10);
-    }
-
-    if (roman === 9) {
-        return "IX";
-    }
     
-    if (roman === 4) {
-        return "IV";
+    const listRoman = [
+        [1000, "M"],
+        [900, "CM"],
+        [500, "D"],
+        [400, "CD"],
+        [100, "C"],
+        [90, "XC"],
+        [50, "L"],
+        [40, "XL"],
+        [10, "X"],
+        [9, "IX"],
+        [5, "V"],
+        [4, "IV"],
+        [1, "I"]
+    ];
+
+    for (const [value, symbol] of listRoman) {
+        if (roman >= value) {
+            return symbol + romanConverter(roman - value);
+        }
     }
 
-    if (roman >= 5) {
-        return "V" + 'I'.repeat(roman - 5);
-    }
-
-    return 'I'.repeat(roman);
+    return '';
 }
 
 module.exports = romanConverter;
