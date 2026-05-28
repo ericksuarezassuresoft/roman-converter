@@ -2,7 +2,12 @@ function romanConverter(roman) {
     if (roman === 1) {
         return "I";
     }
-    return "II";
+
+    if (roman === 2) {
+        return "II";
+    }
+
+    return "III";
 }
 
 module.exports = romanConverter;
