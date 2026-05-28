@@ -3,6 +3,10 @@ function romanConverter(roman) {
         return "IV";
     }
 
+    if (roman === 9) {
+        return "IX";
+    }
+
     if (roman >= 5) {
         return "V" + 'I'.repeat(roman - 5);
     }
