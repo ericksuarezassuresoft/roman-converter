@@ -1,16 +1,12 @@
 function romanConverter(roman) {
-    if (roman === 5) {
-        return "V";
-    }
-
     if (roman === 4) {
         return "IV";
     }
 
-    if (roman === 6) {
-        return "VI";
+    if (roman >= 5) {
+        return "V" + 'I'.repeat(roman - 5);
     }
-    
+
     return 'I'.repeat(roman);
 }
 
