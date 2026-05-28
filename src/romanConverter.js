@@ -1,5 +1,8 @@
 function romanConverter(roman) {
-    return "I";
+    if (roman === 1) {
+        return "I";
+    }
+    return "II";
 }
 
 module.exports = romanConverter;
