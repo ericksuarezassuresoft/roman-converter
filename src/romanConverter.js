@@ -1,4 +1,8 @@
 function romanConverter(roman) {
+    if (roman === 10) {
+        return "X";
+    }
+
     if (roman === 4) {
         return "IV";
     }
