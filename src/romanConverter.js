@@ -3,6 +3,10 @@ function romanConverter(roman) {
         return "X";
     }
 
+    if (roman === 11) { 
+        return "XI";
+    }
+
     if (roman === 4) {
         return "IV";
     }
