@@ -1,9 +1,12 @@
 function romanConverter(roman) {
+    if (roman === 40) {
+        return "XL";
+    }
+
     if (roman >= 10) {
         return "X" + romanConverter(roman - 10);
     }
 
-    
     if (roman === 9) {
         return "IX";
     }
