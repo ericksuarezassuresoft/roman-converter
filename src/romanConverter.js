@@ -1,13 +1,5 @@
 function romanConverter(roman) {
-    if (roman === 1) {
-        return "I";
-    }
-
-    if (roman === 2) {
-        return "II";
-    }
-
-    return "III";
+    return 'I'.repeat(roman);
 }
 
 module.exports = romanConverter;
