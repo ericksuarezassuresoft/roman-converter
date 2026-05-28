@@ -35,3 +35,7 @@ it("It should return X", () => {
 it("It should return XI", () => {
     expect(romanConverter(11)).toBe("XI");
 });
+
+it("It should return XL", () => {
+    expect(romanConverter(40)).toBe("XL");
+});
