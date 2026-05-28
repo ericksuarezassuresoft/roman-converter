@@ -1,4 +1,8 @@
 function romanConverter(roman) {
+    if (roman === 50) {
+        return "L";
+    }
+
     if (roman >= 40) {
         return "XL" + romanConverter(roman - 40);
     }
