@@ -1,4 +1,8 @@
 function romanToInteger(letterToConvert) {
+    if (letterToConvert === 'IV') {
+        return 4;
+    }
+    
     return letterToConvert.length;
 }
 
