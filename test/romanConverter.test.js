@@ -1,52 +1,52 @@
-const romanConverter = require("../src/romanConverter");
+const integerToRoman = require("../src/integerToRoman");
 const romanToInteger = require("../src/romanToInteger");
 
 it("It should return I", () => {
-    expect(romanConverter(1)).toBe("I");
+    expect(integerToRoman(1)).toBe("I");
 });
 
 it("It should return II", () => {
-    expect(romanConverter(2)).toBe("II");
+    expect(integerToRoman(2)).toBe("II");
 });
 
 it("It should return III", () => {
-    expect(romanConverter(3)).toBe("III");
+    expect(integerToRoman(3)).toBe("III");
 });
 
 it("It should return IV", () => {
-    expect(romanConverter(4)).toBe("IV");
+    expect(integerToRoman(4)).toBe("IV");
 });
 
 it("It should return V", () => {
-    expect(romanConverter(5)).toBe("V");
+    expect(integerToRoman(5)).toBe("V");
 });
 
 it("It should return VI", () => {
-    expect(romanConverter(6)).toBe("VI");
+    expect(integerToRoman(6)).toBe("VI");
 });
 
 it("It should return IX", () => {
-    expect(romanConverter(9)).toBe("IX");
+    expect(integerToRoman(9)).toBe("IX");
 });
 
 it("It should return X", () => {
-    expect(romanConverter(10)).toBe("X");
+    expect(integerToRoman(10)).toBe("X");
 });
 
 it("It should return XI", () => {
-    expect(romanConverter(11)).toBe("XI");
+    expect(integerToRoman(11)).toBe("XI");
 });
 
 it("It should return XL", () => {
-    expect(romanConverter(40)).toBe("XL");
+    expect(integerToRoman(40)).toBe("XL");
 });
 
 it("It should return L", () => {
-    expect(romanConverter(50)).toBe("L");
+    expect(integerToRoman(50)).toBe("L");
 });
 
 it("It should return XC", () => {
-    expect(romanConverter(90)).toBe("XC");
+    expect(integerToRoman(90)).toBe("XC");
 });
 
 it("It should return 1", () => {
@@ -83,4 +83,16 @@ it("It should return XI", () => {
 
 it("It should return XL", () => {
     expect(romanToInteger('XL')).toBe(40);
+});
+
+it("It should return L", () => {
+    expect(romanToInteger('L')).toBe(50);
+});
+
+it("It should return XC", () => {
+    expect(romanToInteger('XC')).toBe(90);
+});
+
+it("It should return C", () => {
+    expect(romanToInteger('C')).toBe(100);
 });

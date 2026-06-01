@@ -1,4 +1,4 @@
-function romanConverter(roman) {
+function integerToRoman(roman) {
     
     const listRoman = [
         [1000, "M"],
@@ -18,11 +18,11 @@ function romanConverter(roman) {
 
     for (const [value, symbol] of listRoman) {
         if (roman >= value) {
-            return symbol + romanConverter(roman - value);
+            return symbol + integerToRoman(roman - value);
         }
     }
 
     return '';
 }
 
-module.exports = romanConverter;
+module.exports = integerToRoman;

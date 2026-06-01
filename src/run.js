@@ -1,5 +1,9 @@
-const romanConverter = require("./romanConverter");
+const romanConverter = require("./integerToRoman");
 
 const input = process.argv[2];
 
-console.log("Output:", romanConverter(input));
+if (typeof input === 'number') {
+    console.log("Output:", integerToRoman(input));
+} else {
+    console.log("Output:", romanToInteger(input));
+}
