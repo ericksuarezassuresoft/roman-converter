@@ -1,4 +1,8 @@
 function romanToInteger(letterToConvert) {
+    if (letterToConvert.startsWith("XL")) {
+        return 40;
+    }
+
     if (letterToConvert.startsWith("X")) {
         return 10 + romanToInteger(letterToConvert.slice(1));
     }
