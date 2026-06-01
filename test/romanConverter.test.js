@@ -1,4 +1,5 @@
 const romanConverter = require("../src/romanConverter");
+const romanToInteger = require("../src/romanToInteger");
 
 it("It should return I", () => {
     expect(romanConverter(1)).toBe("I");
