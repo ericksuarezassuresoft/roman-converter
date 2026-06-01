@@ -1,10 +1,6 @@
 function romanToInteger(letterToConvert) {
-    if (letterToConvert === 'V') {
-        return 5;
-    }
-
-    if (letterToConvert === 'VI') {
-        return 6;
+    if (letterToConvert.startsWith("V")) {
+        return 5 + romanToInteger(letterToConvert.slice(1));
     }
 
     if (letterToConvert === 'IV') {
