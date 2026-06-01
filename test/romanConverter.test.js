@@ -47,3 +47,7 @@ it("It should return L", () => {
 it("It should return XC", () => {
     expect(romanConverter(90)).toBe("XC");
 });
+
+it("It should return 1", () => {
+    expect(romanToInteger('I')).toBe(1);
+});
