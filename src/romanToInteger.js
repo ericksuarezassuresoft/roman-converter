@@ -1,4 +1,8 @@
 function romanToInteger(letterToConvert) {
+    if (letterToConvert.startsWith("IX")) {
+        return 9;
+    }
+
     if (letterToConvert.startsWith("V")) {
         return 5 + romanToInteger(letterToConvert.slice(1));
     }
