@@ -68,3 +68,7 @@ it("It should return V", () => {
 it("It should return VI", () => {
     expect(romanToInteger('VI')).toBe(6);
 });
+
+it("It should return IX", () => {
+    expect(romanToInteger('IX')).toBe(9);
+});
