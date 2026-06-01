@@ -1,25 +1,27 @@
 function romanToInteger(letterToConvert) {
-    if (letterToConvert.startsWith("XL")) {
-        return 40;
+    const values = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000
+    };
+    let result = 0;
+
+    for (let i = 0; i < letterToConvert.length; i++) {
+        const current = values[letterToConvert[i]];
+        const next = values[letterToConvert[i + 1]];
+
+        if (current < next) {
+            result -= current;
+        } else {
+            result += current;
+        }
     }
 
-    if (letterToConvert.startsWith("X")) {
-        return 10 + romanToInteger(letterToConvert.slice(1));
-    }
-
-    if (letterToConvert.startsWith("IX")) {
-        return 9;
-    }
-
-    if (letterToConvert.startsWith("V")) {
-        return 5 + romanToInteger(letterToConvert.slice(1));
-    }
-
-    if (letterToConvert === 'IV') {
-        return 4;
-    }
-
-    return letterToConvert.length;
+    return result;
 }
 
 module.exports = romanToInteger;
