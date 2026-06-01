@@ -1,5 +1,5 @@
-function romanToInteger() {
-    return 1;
+function romanToInteger(letterToConvert) {
+    return letterToConvert.length;
 }
 
 module.exports = romanToInteger;
