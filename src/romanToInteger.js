@@ -1,4 +1,8 @@
 function romanToInteger(letterToConvert) {
+    if (letterToConvert.startsWith("X")) {
+        return 10;
+    }
+
     if (letterToConvert.startsWith("IX")) {
         return 9;
     }
