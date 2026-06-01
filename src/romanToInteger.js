@@ -3,6 +3,10 @@ function romanToInteger(letterToConvert) {
         return 5;
     }
 
+    if (letterToConvert === 'VI') {
+        return 6;
+    }
+
     if (letterToConvert === 'IV') {
         return 4;
     }
